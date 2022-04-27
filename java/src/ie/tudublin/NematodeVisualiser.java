@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import ddf.minim.Minim;
 import processing.core.PApplet;
-import processing.core.PFont;
 import processing.data.Table;
 import processing.data.TableRow;
 import ddf.minim.AudioBuffer;
@@ -46,6 +45,10 @@ public class NematodeVisualiser extends PApplet
 		
 		if (keyCode == RIGHT)
 		{
+			background(0);
+			count = ++count % nematodes.size();
+            // currentNematode = nematodes.get(count);
+            stroke(map(count, 0, nematodes.size(), 0, 255), 255, 255);
 		}
 	}
 
@@ -110,10 +113,12 @@ public class NematodeVisualiser extends PApplet
 		drawArrow();
 		drawNematodes();
 		printDetails();
+		text(currentNematode.getName(), 290, 100);
 	}
 
 	public void drawArrow(){
 		stroke(col,255,255);
+		stroke(255);
 		//arrows
 		//right arrow
 		line(borderRight, height/2, borderRight-90, height/2);
