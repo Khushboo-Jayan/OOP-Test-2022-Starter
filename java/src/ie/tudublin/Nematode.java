@@ -9,6 +9,9 @@ public class Nematode extends PApplet{
     private boolean limbs;
     private String gender;
     private boolean eyes;
+
+    float cx = width/2;
+    float cy = height/2;
     
     public Nematode(TableRow tr)
     {
@@ -74,7 +77,5 @@ public class Nematode extends PApplet{
         return "Nematode [eyes=" + eyes + ", gender=" + gender + ", length=" + length + ", limbs=" + limbs + ", name="
                 + name + "]";
     }
-    
-
-    
+        
 }
