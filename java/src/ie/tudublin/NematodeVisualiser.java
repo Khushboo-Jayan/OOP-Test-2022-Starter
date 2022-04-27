@@ -16,6 +16,16 @@ public class NematodeVisualiser extends PApplet
 		}		
 	}
 
+	public void loadNematodes()
+    {
+        Table table = loadTable("HabHYG15ly.csv", "header");
+        for(TableRow r:table.rows())
+        {
+            Nematode s = new Nematode(r);
+            // Nematode.create(s);
+        }
+    }//end loading csv file function
+
 
 	public void settings()
 	{
@@ -29,11 +39,6 @@ public class NematodeVisualiser extends PApplet
 		smooth();				
 	}
 	
-
-	public void loadNematodes()
-	{
-	}
-
 
 	public void draw()
 	{	
