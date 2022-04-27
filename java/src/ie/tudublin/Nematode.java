@@ -74,7 +74,7 @@ public class Nematode extends PApplet{
 
     @Override
     public String toString() {
-        return "Nematode [eyes=" + eyes + ", gender=" + gender + ", length=" + length + ", limbs=" + limbs + ", name="
+        return "Nematode [eyes = " + eyes + ", gender = " + gender + ", length = " + length + ", limbs = " + limbs + ", name = "
                 + name + "]";
     }
     
